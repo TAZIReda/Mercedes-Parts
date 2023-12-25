@@ -1,0 +1,48 @@
+<div class="containerr">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <p-panel header="Sign Up">
+          <div class="container">
+            <div class="info">
+              <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                  <i class="pi pi-user"></i>
+                </span>
+                <input type="text" formControlName="username" placeholder="Username"/>
+              </div>
+            </div>
+            <div class="info">
+              <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                  <i class="pi pi-envelope"></i>
+                </span>
+                <input formControlName="email" type="email" placeholder="Email">
+              </div>
+            </div>
+            <div class="info">
+              <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                  <i class="pi pi-lock"></i>
+                </span>
+                <input type="password" formControlName="password" placeholder="Password">
+              </div>
+            </div>
+            <div class="info">
+              <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                  <i class="pi pi-lock"></i>
+                </span>
+                <input type="password" formControlName="confirmPassword" placeholder="Confirm Password">
+              </div>
+            </div>
+             <div class="info">
+                <p-checkbox formControlName="acceptTerms" value="I accept the terms and conditions" inputId="ny"></p-checkbox>
+                <label for="ny">I accept the terms and conditions</label>
+            </div>
+            <div class="sub">
+              <p-button type="submit" label="Sign Up" icon="pi pi-user-plus"></p-button>
+            </div>
+          </div>
+        </p-panel>
+      </form>
+      
+</div>

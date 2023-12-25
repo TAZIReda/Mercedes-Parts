@@ -1,0 +1,34 @@
+<div class="containerr">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <p-panel header="Login">
+        <div class="container">
+          
+          <div class="info">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon">
+                <i class="pi pi-envelope"></i>
+              </span>
+              <input formControlName="email" type="email" placeholder="Email">
+            </div>
+          </div>
+
+          <div class="info">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon">
+                <i class="pi pi-lock"></i>
+              </span>
+              <input type="password" formControlName="password" placeholder="Password">
+            </div>
+          </div>
+
+        
+        
+
+          <div class="sub">
+            <p-button type="submit" label="Login" icon="pi pi-sign-in"></p-button>
+          </div>
+        </div>
+      </p-panel>
+    </form>
+    
+</div>

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeIcons,MenuItem } from 'primeng/api';
+import { FormControl, FormGroup } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-root',
@@ -8,28 +11,20 @@ import { PrimeIcons,MenuItem } from 'primeng/api';
 })
 export class AppComponent  implements OnInit {
   title = 'frontend';
-  items: MenuItem[] | undefined;
+  countries!: any[] ;
+
+    form = new FormGroup({
+    selectedCountry: new FormControl(null)
+    });
+
+    selectedCountry: { name: string, code: string } | null = null;
 
   ngOnInit() {
-      this.items = [
-          {
-              label: 'Update',
-              icon: 'pi pi-refresh'
-          },
-          {
-              label: 'Delete',
-              icon: 'pi pi-times'
-          },
-          {
-              label: 'Angular',
-              icon: 'pi pi-external-link',
-              url: 'http://angular.io'
-          },
-          {
-              label: 'Router',
-              icon: 'pi pi-upload',
-              routerLink: '/fileupload'
-          }
+      this.countries = [
+          { name: 'Login', code: 'AU' },
+          { name: 'Logout', code: 'BR' },
+          { name: 'Register', code: 'CN' }
       ];
   }
+
 }
